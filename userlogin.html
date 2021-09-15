@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>login</title>
+<link rel ="stylesheet" href="main.css">
+<script type="text/javascript">
+function validate(id,pass){
+var aid=id;
+var pwd=pass;
+if(aid=="")
+	{
+document.getElementById("msg").innerHTML="<font color='red'Enter Email id </font>";
+	}
+else if(pwd==""){
+	document.getElementById("msg").innerHTML="<font color='red'>Enter password </font>";
+	}
+else if(aid=="user" && pwd=="user"){
+	open("HomePage.html");
+}
+else{
+	document.getElementById("msg").innerHTML="<font color='red'>incorrect userid/password</font>";
+}
+}
+</script>
+</head>
+<body background="jjg.jpg">
+<table>
+<tr><th colspan="2">User Login</th></tr>
+<tr><th colspan="2"><img src="jjtt.png" alt="" height="200" width="350"></th></tr>
+<tr><td>Enter Email id:<input type="text" placeholder="Email Address" name="aid"></td></tr>
+<tr><td>Enter Password:<input type="password" placeholder="Enter password" name="pwd"></td></tr>
+<tr><th><div class=forgot-pwd><a href="#">Forgot Password?</a></div></th></tr>
+<tr><th colspan="2"><a href="HomePage.html">Login</a></th></tr>
+<tr><th><div class=sign-in> Not a member?<a href="Register.html">sign up now</a></div></th></tr>
+</table>
+<div id="msg"></div>
+</body>
+</html>

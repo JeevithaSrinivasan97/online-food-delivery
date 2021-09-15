@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel ="stylesheet" href="main.css">
+<script type="text/javascript">
+function validform(){
+var name=document.myform.name.value;
+var password=document.myform.password.value;
+if(name==null || name=="")
+	{
+	alert("Name cannot be blank");
+	return false;
+	}
+else if(password.length<6){
+	alert("password must be greater than 6 char");
+	return false;
+}
+}
+
+</script>
+</head>
+<body background="77.jpg">
+<table border="1">
+<div class="reg">
+<form name="myform" method="post"onsubmit="return validform()">
+<tr><th colspan="2">Register</th></tr>
+<tr><td rowspan="2">Name:</td></tr>
+<tr><td><input type ="text" name="name" placeholder="name"></td></tr>
+ <tr><td rowspan="2">Email:</td></tr>         
+ <tr><td><input type="text" id="email" name="email" placeholder="jeevitha@example.com"></td></tr>
+<tr><td rowspan="2">password:</td></tr>
+<tr><td><input type="password" name="password" placeholder="password"></td></tr>
+<tr><td rowspan="2">Address:</td></tr>
+<tr><td><input type="text" name="address" placeholder="15th street"></td></tr>
+<tr><td rowspan="2">City</td></tr>
+<tr><td><input type="text" id="city" name="city" placeholder="Chennai"></td></tr>
+<tr><td rowspan="2">zig:</td></tr>
+ <tr><td><input type="text" id="zip" name="zip" placeholder="10001"></td></tr>
+<tr><td rowspan="2">Phone no:</td></tr>
+<tr><td><input type="text" name="Phoneno"placeholder="9856789767"></td></tr>
+<tr><th colspan="2"><a href="userlogin.html">Submit</a></th></tr>
+
+</form>
+</div>
+</table>
+</body>
+</html>
